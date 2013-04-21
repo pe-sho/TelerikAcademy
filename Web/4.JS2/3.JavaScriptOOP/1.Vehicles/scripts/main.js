@@ -15,7 +15,7 @@ define(function (require) {
 
     console.group('Land Vehicle');
     (function () {
-        var landVehicle = (function() {
+        var landVehicle = (function () {
             var wheel1 = new Wheel(5);
             var wheel2 = new Wheel(5);
             var wheel3 = new Wheel(5);
@@ -62,7 +62,7 @@ define(function (require) {
 
     console.group('Water Vehicle');
     (function () {
-        var waterVehicle = (function() {
+        var waterVehicle = (function () {
             var propeller1 = new Propeller(20);
             var propeller2 = new Propeller(20);
 
@@ -95,7 +95,7 @@ define(function (require) {
 
     console.group('Amphibious Vehicle');
     (function () {
-        var amphibiousVehicle = (function() {
+        var amphibiousVehicle = (function () {
             var propeller1 = new Propeller(20);
             var propeller2 = new Propeller(20);
             var propellers = [propeller1, propeller2];
