@@ -34,7 +34,7 @@ define(function (require) {
     (function () {
         var airVehicle = new AirVehicle(new PropellingNozzle(50));
 
-        console.group('Afterburner Switch: UP');
+        console.group('Afterburner Switch: DOWN');
         (function () {
             airVehicle.accelerate();
             console.log(airVehicle.speed);
@@ -46,7 +46,7 @@ define(function (require) {
 
         airVehicle.toggleAfterBurner();
 
-        console.group('Afterburner Switch: DOWN');
+        console.group('Afterburner Switch: UP');
         (function () {
             airVehicle.accelerate();
             console.log(airVehicle.speed);
