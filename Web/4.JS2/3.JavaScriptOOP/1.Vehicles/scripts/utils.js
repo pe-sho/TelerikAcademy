@@ -8,7 +8,7 @@ define(function () {
         return x;
     }
 
-    return {
+    var utils = {
         math: {
             circle: {
                 perimeter: function (radius) {
@@ -25,4 +25,6 @@ define(function () {
             }, 0);
         }
     };
+
+    return utils;
 });
