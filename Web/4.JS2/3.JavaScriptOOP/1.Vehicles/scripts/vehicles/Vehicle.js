@@ -13,11 +13,9 @@ define(function (require) {
     }
 
     Vehicle.prototype.accelerate = function () {
-        var accelerations = this.propulsionUnits.map(function (unit) {
-            return unit.produceAcceleration();
+        this.speed += utils.sum(this.propulsionUnits, function () {
+            return this.produceAcceleration();
         });
-
-        this.speed += utils.sum(accelerations);
     };
 
     return Vehicle;
