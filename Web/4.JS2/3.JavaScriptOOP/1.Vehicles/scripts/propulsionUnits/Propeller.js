@@ -32,6 +32,8 @@ define(function (require) {
         var isClockwise = (this.spinDirection === spinDirection.CLOCKWISE);
 
         this.spinDirection = spinDirection[isClockwise ? 'COUNTERCLOCKWISE' : 'CLOCKWISE'];
+        
+        return this;
     };
 
     return Propeller;
