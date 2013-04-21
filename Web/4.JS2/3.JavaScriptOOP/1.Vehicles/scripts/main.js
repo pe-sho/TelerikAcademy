@@ -15,12 +15,14 @@ define(function (require) {
 
     console.group('Land Vehicle');
     (function () {
-        var wheel1 = new Wheel(5);
-        var wheel2 = new Wheel(5);
-        var wheel3 = new Wheel(5);
-        var wheel4 = new Wheel(5);
+        var landVehicle = (function() {
+            var wheel1 = new Wheel(5);
+            var wheel2 = new Wheel(5);
+            var wheel3 = new Wheel(5);
+            var wheel4 = new Wheel(5);
 
-        var landVehicle = new LandVehicle(wheel1, wheel2, wheel3, wheel4);
+            return new LandVehicle(wheel1, wheel2, wheel3, wheel4);
+        }());
 
         landVehicle.accelerate();
         console.log(landVehicle.speed);
@@ -60,10 +62,12 @@ define(function (require) {
 
     console.group('Water Vehicle');
     (function () {
-        var propeller1 = new Propeller(20);
-        var propeller2 = new Propeller(20);
+        var waterVehicle = (function() {
+            var propeller1 = new Propeller(20);
+            var propeller2 = new Propeller(20);
 
-        var waterVehicle = new WaterVehicle(propeller1, propeller2);
+            return new WaterVehicle(propeller1, propeller2);
+        }());
 
         console.group('Spin Direction: CLOCKWISE');
         (function () {
@@ -91,15 +95,17 @@ define(function (require) {
 
     console.group('Amphibious Vehicle');
     (function () {
-        var propeller1 = new Propeller(20);
-        var propeller2 = new Propeller(20);
-        var propellers = [propeller1, propeller2];
+        var amphibiousVehicle = (function() {
+            var propeller1 = new Propeller(20);
+            var propeller2 = new Propeller(20);
+            var propellers = [propeller1, propeller2];
 
-        var wheel1 = new Wheel(5);
-        var wheel2 = new Wheel(5);
-        var wheels = [wheel1, wheel2];
+            var wheel1 = new Wheel(5);
+            var wheel2 = new Wheel(5);
+            var wheels = [wheel1, wheel2];
 
-        var amphibiousVehicle = new AmphibiousVehicle(wheels, propellers);
+            return new AmphibiousVehicle(wheels, propellers);
+        }());
 
         console.group('Propulsion Unit: WHEELS');
         (function () {
