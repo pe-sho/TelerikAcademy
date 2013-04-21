@@ -4,6 +4,10 @@
 define(function () {
     'use strict';
 
+    function Identity() {
+        return this;
+    }
+
     return {
         math: {
             circle: {
@@ -13,10 +17,12 @@ define(function () {
             }
         },
 
-        sum: function (array) {
+        sum: function (array, iterator) {
+            iterator = iterator || Identity;
+
             return array.reduce(function (x, y) {
-                return x + y;
-            });
+                return x + iterator.call(y);
+            }, 0);
         }
     };
 });
