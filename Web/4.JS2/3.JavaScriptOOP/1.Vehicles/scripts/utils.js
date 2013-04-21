@@ -4,8 +4,8 @@
 define(function () {
     'use strict';
 
-    function Identity() {
-        return this;
+    function identity(x) {
+        return x;
     }
 
     return {
@@ -18,10 +18,10 @@ define(function () {
         },
 
         sum: function (array, iterator) {
-            iterator = iterator || Identity;
+            iterator = iterator || identity;
 
             return array.reduce(function (x, y) {
-                return x + iterator.call(y);
+                return x + iterator(y);
             }, 0);
         }
     };
