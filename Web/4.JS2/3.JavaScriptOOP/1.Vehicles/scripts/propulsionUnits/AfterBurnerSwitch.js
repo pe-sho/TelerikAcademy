@@ -9,7 +9,9 @@ define(function () {
     }
 
     AfterBurnerSwitch.prototype.toggle = function () {
-        return this.isUp = !this.isUp;
+        this.isUp = !this.isUp;
+        
+        return this;
     };
 
     return AfterBurnerSwitch;
